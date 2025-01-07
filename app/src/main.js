@@ -16,8 +16,8 @@ function renderInventory() {
             <div>Price: $${item.price}</div>
             <div>Quantity: ${item.quantity}</div>
             <div>
-                <button onclick="updateItem(${i})">Update</button>
-                <button onclick="deleteItem(${i})">Delete</button>
+                <button class = "update" onclick="updateItem(${i})">Update</button>
+                <button class = "delete" onclick="deleteItem(${i})">Delete</button>
             </div>
         `;
         inventoryList.appendChild(card);

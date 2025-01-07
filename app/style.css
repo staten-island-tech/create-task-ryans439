@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: sans-serif, Arial;
     background-color: #f4f4f9;
     display: flex;
     justify-content: center;
@@ -86,8 +86,10 @@ h1, h2 {
 
 .inventory-item button.delete {
     background-color: red;
+    
 }
 
 .inventory-item button:hover {
-    opacity: 0.9;
+    opacity: 0.5;
+    padding: 7px, 12px;
 }
