@@ -5,7 +5,7 @@ const itemQuantityInput = document.getElementById('itemQuantity');
 const inventoryList = document.getElementById('inventoryList');
 let inventory = [];
 
-function renderInventory() {
+function loadInventory() {
     inventoryList.innerHTML = '';
     for (let i = 0; i < inventory.length; i++) {
         const item = inventory[i];
@@ -32,7 +32,7 @@ function addItem() {
     if (name && price && quantity) {
         const newItem = { name, price, quantity };
         inventory.push(newItem);
-        renderInventory();
+        loadInventory();
         itemNameInput.value = '';
         itemPriceInput.value = '';
         itemQuantityInput.value = '';
@@ -41,14 +41,14 @@ function addItem() {
 
 function deleteItem(index) {
     inventory.splice(index, 1);
-    renderInventory();
+    loadInventory();
 }
 
 function updateItem(index) {
     const newQuantity = prompt('Enter new quantity:', inventory[index].quantity);
     if (newQuantity !== null) {
         inventory[index].quantity = newQuantity;
-        renderInventory();
+        loadInventory();
     }
 }
 
