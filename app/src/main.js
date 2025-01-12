@@ -16,7 +16,7 @@ function loadInventory() {
             <div>Price: $${item.price}</div>
             <div>Quantity: ${item.quantity}</div>
             <div>
-                <button class = "update" onclick="updateItem(${i})">Update</button>
+                <button class = "update" onclick="updateItem(${i})">Change Quantity</button>
                 <button class = "delete" onclick="deleteItem(${i})">Delete</button>
             </div>
         `;
