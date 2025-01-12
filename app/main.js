@@ -6,7 +6,7 @@ const inventoryList = document.getElementById('inventoryList');
 let inventory = [];
 
 function loadInventory() {
-    inventoryList.innerHTML = '';
+    inventoryList.innerHTML = ''
     for (let i = 0; i < inventory.length; i++) {
         const item = inventory[i];
         const card = document.createElement('div');
@@ -42,7 +42,7 @@ function addItem() {
 function deleteItem(index) {
     inventory.splice(index, 1);
     loadInventory();
-}
+}   
 
 function updateItem(index) {
     const newQuantity = prompt('Enter new quantity:', inventory[index].quantity);
