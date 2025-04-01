@@ -22,6 +22,9 @@ function loadInventory() {
         `;
         inventoryList.appendChild(card);
     }
+    if (inventory.length === 0) {
+        inventoryList.innerHTML = '<p>No items in inventory.</p>';
+    }
 }
 
 function addItem() {
